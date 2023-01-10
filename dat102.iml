@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Bag/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Bag2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DobbelKjedetListeU/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/EnumArbeidsdag/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/EnumSjanger/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Generisk/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kalkulator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Karakter/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/KoeT/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LabyrintUtenRekursjon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ListeOrdnetU/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MengdeU/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SorteringOgSoekingFyllUt/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Stabel/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TabelHaugU/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
