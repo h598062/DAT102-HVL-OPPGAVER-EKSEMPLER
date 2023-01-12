@@ -14,7 +14,7 @@ public class KjedetBag<T> implements BagADT<T> {
 
 	@Override
 	public void leggTil(T el) {
-		LinearNode<T> nynode = new LinearNode<T>(el);
+		LinearNode<T> nynode = new LinearNode<>(el);
 		// a Fyll ut
 		nynode.setNeste(forste);
 		forste = nynode;
