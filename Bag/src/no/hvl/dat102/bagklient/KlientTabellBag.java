@@ -31,16 +31,16 @@ public class KlientTabellBag {
 			System.out.println("\nPersonenen " + person + " er ikke i samlingen");
 		}
 
-//Bør også teste når personen ikke fins i samlingen
+//BÃ¸r ogsÃ¥ teste nÃ¥r personen ikke fins i samlingen
 
-// Test på inneholder
+// Test pÃ¥ inneholder
 		person = new Person("Berit", 4);
 		if (bag.inneholder(person)) {
 			System.out.println("\nSamlingen inneholder " + person);
 		} else {
 			System.out.println("\nSamlingen inneholder ikke " + person);
 		}
-// Bør også teste på en person som ikke er med i samlingen
+// BÃ¸r ogsÃ¥ teste pÃ¥ en person som ikke er med i samlingen
 
 		// Alt1: Skriver ut en full tabell (mangler en person som er fjernet)
 		System.out.println("\nAlternativ1\n");

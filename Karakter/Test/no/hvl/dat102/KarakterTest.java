@@ -102,7 +102,7 @@ public class KarakterTest {
 	}
 
 	@Test(expected = FeilKarakterException.class)
-	// Forventer at metoden skal kaste unntaket for at testen skal være riktig.
+	// Forventer at metoden skal kaste unntaket for at testen skal vÃ¦re riktig.
 	public void er101ulovlig() throws FeilKarakterException {
 		Karakter.beregnKarakter(101);
 	}

@@ -6,7 +6,7 @@ public class Person implements Comparable<Person> {
 	private String etternavn;
 	private int foedselsaar;
 
-	// Konstruktører
+	// KonstruktÃ¸rer
 
 	public Person() {
 		this("", "", 0);
@@ -51,7 +51,7 @@ public class Person implements Comparable<Person> {
 	public int compareTo(Person denAndrePersonen) {
 		int resultat = 0;
 		//... Fyll ut
-		//Kall på compareTo i Stringklassen
+		//Kall pÃ¥ compareTo i Stringklassen
 		return resultat;
 	}//
 

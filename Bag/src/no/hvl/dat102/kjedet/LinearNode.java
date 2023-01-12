@@ -29,7 +29,7 @@ public class LinearNode<T> {
     }
 
     /**
-     * Returnerer etterfølger.
+     * Returnerer etterfÃ¸lger.
      *
      * @return neste node
      */

@@ -3,10 +3,10 @@ package no.hvl.dat102;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-//Eks modifisert fra Mughals bok Java som første programmeringsspråk 
+//Eks modifisert fra Mughals bok Java som fÃ¸rste programmeringssprÃ¥k 
 public class BagKlient {
 	static final String SENSUR = "SLADDET";
-	static String ord[] = { "Java", "er", "gøy", "moro", "og", "kult", "mest", "gøy" };
+	static String ord[] = { "Java", "er", "gÃ¸y", "moro", "og", "kult", "mest", "gÃ¸y" };
 
 	public static void main(String[] args) {
 
@@ -20,7 +20,7 @@ public class BagKlient {
 		// Opprett en liste med ord som skal sladdes
 		// Alt: List<String> sladdeteOrd = new ArrayList<>();
 		List<String> sladdeteOrd = new LinkedList<>();
-		sladdeteOrd.add("gøy");
+		sladdeteOrd.add("gÃ¸y");
 		sladdeteOrd.add("kult");
 		sladdeteOrd.add("morsom"); 
 

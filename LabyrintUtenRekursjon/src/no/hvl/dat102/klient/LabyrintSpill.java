@@ -12,7 +12,7 @@ public class LabyrintSpill {
 	}
 
 	/**
-	 * Forsøke å gjennomgå labyrinten
+	 * ForsÃ¸ke Ã¥ gjennomgÃ¥ labyrinten
 	 */
 
 	public boolean gjennomgaa() {
@@ -25,7 +25,7 @@ public class LabyrintSpill {
 			pos = stabel.pop();
 			labyrint.forsoekPosisjon(pos.getX(), pos.getY());
 			if (pos.getX() == labyrint.getRekker() - 1 && pos.getY() == labyrint.getKolonner() - 1) {
-				ferdig = true; // labyrinten er gjennomgått
+				ferdig = true; // labyrinten er gjennomgÃ¥tt
 			} else {
 				push_ny_pos(pos.getX(), pos.getY() - 1, stabel);
 				push_ny_pos(pos.getX(), pos.getY() + 1, stabel);

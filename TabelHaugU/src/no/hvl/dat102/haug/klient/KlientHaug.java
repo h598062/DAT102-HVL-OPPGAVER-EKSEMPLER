@@ -4,7 +4,7 @@ import no.hvl.dat102.haug.tabell.*;
 
 public class KlientHaug {
 	public static void main(String[] a) {
-		// Tester haugen ved å sortere verdier i en tabell
+		// Tester haugen ved Ã¥ sortere verdier i en tabell
 		int tab[] = { 300, 10, 30, 2, 100, 33, 1, 200, 18, 54 };
 		TabellHaug<Integer> h1 = new TabellHaug<Integer>();
 		for (int i = 0; i < tab.length; i++) {
@@ -13,9 +13,9 @@ public class KlientHaug {
 		}
 
 		
-		System.out.println("Verdiene i tabellen er nå:");
+		System.out.println("Verdiene i tabellen er nÃ¥:");
 		h1.skrivTab();
-		// Tar ut av haugen og skriver i sortert rekkefølge
+		// Tar ut av haugen og skriver i sortert rekkefÃ¸lge
 		System.out.println("\nHaugen i sortert rekkefoelge:");
 		while (!h1.erTom()) {
 			Integer h =  h1.fjernMinste();

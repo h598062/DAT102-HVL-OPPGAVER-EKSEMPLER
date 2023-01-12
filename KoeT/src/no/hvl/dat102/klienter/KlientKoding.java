@@ -9,17 +9,17 @@ public class KlientKoding {
 	public static void main(String[] a) {
 		int[] noekkel = { 5, 12, -3, 8, -9, 4, 10 };
 		String dekodet = "", kodet = "";
-		String melding = "Dette er en proeve på en tekst";
+		String melding = "Dette er en proeve pÃ¥ en tekst";
 		KoeADT<Integer> koe1 = new TabellSirkulaerKoe<>();
 		KoeADT<Integer> koe2 = new TabellSirkulaerKoe<>();
 		// Bytte ut med anne implementasjon
 		int kodeVerdi;
 
 		/*
-		 * Legger kodeverdiene inn i to køer.
-		 * Tenker oss at sender som koder har en kø og mottaker som dekoder har en kø
-		 * Køene blir operert "synkront" , tar ut og legger inn tilsvarende noekkelelement i de
-		 * to køene og vi er garantert riktig resultat. Vi går ikke rundt alfabetet i
+		 * Legger kodeverdiene inn i to kÃ¸er.
+		 * Tenker oss at sender som koder har en kÃ¸ og mottaker som dekoder har en kÃ¸
+		 * KÃ¸ene blir operert "synkront" , tar ut og legger inn tilsvarende noekkelelement i de
+		 * to kÃ¸ene og vi er garantert riktig resultat. Vi gÃ¥r ikke rundt alfabetet i
 		 *  denne kodingen.
 		 */
 

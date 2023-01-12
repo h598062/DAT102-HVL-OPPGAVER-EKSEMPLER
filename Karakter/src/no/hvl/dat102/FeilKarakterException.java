@@ -1,7 +1,7 @@
 package no.hvl.dat102;
 
 /**
- * Feilhåndtering for karakter.
+ * FeilhÃ¥ndtering for karakter.
  * 
  * @author Ole Olsen
  */

@@ -22,7 +22,7 @@ public class LinearNode<T>{
     element = elem;
   }
  /**********************************************************
-    Returnerer etterfølger.
+    Returnerer etterfÃ¸lger.
   **********************************************************/
   public LinearNode<T> getNeste(){
     return neste;

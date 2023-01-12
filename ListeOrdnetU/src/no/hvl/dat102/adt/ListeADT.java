@@ -25,7 +25,7 @@ public interface ListeADT<T> {
 	boolean inneholder(T element);
 
 	/**
-	 * Fjerner og returnerer referansen det første elmentet fra listen.
+	 * Fjerner og returnerer referansen det fÃ¸rste elmentet fra listen.
 	 *
 	 * @return elementet som er fjernet
 	 */
@@ -40,10 +40,10 @@ public interface ListeADT<T> {
 	T fjernSiste();
 
 	/**
-	 * Returnerer en referanse til det første elementet i denne listen.
+	 * Returnerer en referanse til det fÃ¸rste elementet i denne listen.
 	 * 
 	 * @exception EmpyCollectionException unntak kastes dersom listen allerede er tom
-	 * @return første element i listen
+	 * @return fÃ¸rste element i listen
 	 */
 	T foerste();
 

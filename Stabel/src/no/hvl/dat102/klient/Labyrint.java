@@ -19,7 +19,7 @@ public class Labyrint {
 			
 	 
 	/**
-	 * Marker posisjonen som forsøkt
+	 * Marker posisjonen som forsÃ¸kt
 	 */
 	public void forsoekPosisjon(int rekke, int kolonne) {
 		gridd[rekke][kolonne] = FORSOEKT;
@@ -51,9 +51,9 @@ public class Labyrint {
 
 	public boolean gyldigPosisjon(int rekke, int kolonne) {
 		boolean resultat = false;
-		// sjekk på innenfor griddet
+		// sjekk pÃ¥ innenfor griddet
 		if (rekke >= 0 && rekke < gridd.length && kolonne >= 0 && kolonne < gridd[rekke].length) {
-			// sjekk på ikke-sperret og ikke forsøkt
+			// sjekk pÃ¥ ikke-sperret og ikke forsÃ¸kt
 			
 			if (gridd[rekke][kolonne] == 1) {
 				resultat = true;

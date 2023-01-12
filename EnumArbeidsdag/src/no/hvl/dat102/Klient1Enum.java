@@ -8,16 +8,16 @@ public class Klient1Enum {
 		Arbeidsdag startdag = Arbeidsdag.MANDAG;
 		Arbeidsdag sluttdag = Arbeidsdag.FREDAG;
 		
-		System.out.println("Arbeidet startet på " + startdag);
-		System.out.println("Arbeidet slutter på " + sluttdag);	
+		System.out.println("Arbeidet startet pÃ¥ " + startdag);
+		System.out.println("Arbeidet slutter pÃ¥ " + sluttdag);	
 		
 		//Alt
-		System.out.println("Arbeidet startet på " + startdag.toString());
-		System.out.println("Arbeidet slutter på " + sluttdag.toString());	
+		System.out.println("Arbeidet startet pÃ¥ " + startdag.toString());
+		System.out.println("Arbeidet slutter pÃ¥ " + sluttdag.toString());	
 		
 		
-		System.out.println("Arbeidet startet på " + startdag.name());
-		System.out.println("Arbeidet slutter på " + sluttdag.name());	
+		System.out.println("Arbeidet startet pÃ¥ " + startdag.name());
+		System.out.println("Arbeidet slutter pÃ¥ " + sluttdag.name());	
 		
 			
 	}

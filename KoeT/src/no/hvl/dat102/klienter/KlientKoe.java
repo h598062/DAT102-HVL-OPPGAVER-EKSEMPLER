@@ -16,7 +16,7 @@ public class KlientKoe {
 		for (int i = 0; i < lengde; i++) {
 			tegnKoe.innKoe(streng.charAt(i));
 		}
-		System.out.println(tegnKoe); // kall på toString()
+		System.out.println(tegnKoe); // kall pÃ¥ toString()
 		try {
 			while (!tegnKoe.erTom()) {
 				char tegn = tegnKoe.utKoe();

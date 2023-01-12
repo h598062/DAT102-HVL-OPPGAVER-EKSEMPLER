@@ -20,12 +20,12 @@ public class Klient2Enum {
 
 		switch (dag) {
 		case MANDAG:
-			System.out.println("Dårlig dag\n");
+			System.out.println("DÃ¥rlig dag\n");
 			break;
 		case TIRSDAG:
 		case ONSDAG:
 		case TORSDAG:
-			System.out.println("Ikke så gale\n");
+			System.out.println("Ikke sÃ¥ gale\n");
 			break;
 		case FREDAG:
 			System.out.println("Topp\n");

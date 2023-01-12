@@ -8,7 +8,7 @@ import no.hvl.dat102.kjedet.KjedetOrdnetListe;
 public final class KlientOrdnetListe {
 
 	/**
-	 * Hindrer muligheten til å instansiere denne klassen.
+	 * Hindrer muligheten til Ã¥ instansiere denne klassen.
 	 */
 	private KlientOrdnetListe() {
 	}
