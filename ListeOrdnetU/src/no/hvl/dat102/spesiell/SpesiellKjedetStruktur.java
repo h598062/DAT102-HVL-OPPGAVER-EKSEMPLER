@@ -40,17 +40,17 @@ public class SpesiellKjedetStruktur<T> {
 
 	public void snuKjedetStruktur() {
 
-		             // s peker på første noden i strukturen som
+		             // s peker pÃ¥ fÃ¸rste noden i strukturen som
 		     		 // skal snues(reverseres).
 		             // initier r, den reverserte strukturen,
 					// til den tomme listen
-		            // så lenge s ulik null{
-		            // La n peke på s sin første node
-			        // La nå s peke på resten av strukturen
+		            // sÃ¥ lenge s ulik null{
+		            // La n peke pÃ¥ s sin fÃ¸rste node
+			        // La nÃ¥ s peke pÃ¥ resten av strukturen
 			        // Kjed n til resten av r
-			       //  og la r peke på dens nye første node
+			       //  og la r peke pÃ¥ dens nye fÃ¸rste node
 	               // }
-		          // Til slutt, la start peke på den reverserte
+		          // Til slutt, la start peke pÃ¥ den reverserte
 					// kjedete strukturen.
 		
 		LinearNode<T> r, n, s;

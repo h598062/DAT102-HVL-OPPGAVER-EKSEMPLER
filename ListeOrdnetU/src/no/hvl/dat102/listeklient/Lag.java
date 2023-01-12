@@ -28,7 +28,7 @@ public class Lag implements Comparable<Lag>{
 
  /*****************************************************************
    Sammenligner antall seire av dette lag med et annet lag.
-   Returnerer  -1, 0, or 1 for mindre enn, lik , eller større enn.
+   Returnerer  -1, 0, or 1 for mindre enn, lik , eller stÃ¸rre enn.
  *****************************************************************/
  @Override
 public int compareTo (Lag detAndre){

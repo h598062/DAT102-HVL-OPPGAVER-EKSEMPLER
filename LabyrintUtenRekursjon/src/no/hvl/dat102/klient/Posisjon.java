@@ -13,7 +13,7 @@ public class Posisjon {
 	private int y;
 
 	/*
-	 * Konstruktør
+	 * KonstruktÃ¸r
 	 */
 	Posisjon() {
 		x = 0;

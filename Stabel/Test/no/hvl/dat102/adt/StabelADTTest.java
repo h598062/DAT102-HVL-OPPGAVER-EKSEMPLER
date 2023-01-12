@@ -44,7 +44,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test på at en ny stabel er tom.
+	 * Test pÃ¥ at en ny stabel er tom.
 	 */
 	@Test
 	public void nyStabelErTom() {
@@ -52,7 +52,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test på push and pop.
+	 * Test pÃ¥ push and pop.
 	 */
 	@Test
 	public void pushOgPop() {
@@ -73,7 +73,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test på push og pop med duplikate verdier.
+	 * Test pÃ¥ push og pop med duplikate verdier.
 	 */
 	@Test
 	public void pushOgPopMedDuplikater() {
@@ -94,7 +94,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Testing på peek.
+	 * Testing pÃ¥ peek.
 	 */
 	@Test
 	public void pushPopPushPushPopPeek() {
@@ -112,7 +112,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test på at en stabel med noen elementer ikke er tom.
+	 * Test pÃ¥ at en stabel med noen elementer ikke er tom.
 	 */
 	@Test
 	public final void erIkkeTom() {
@@ -122,7 +122,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test på at en stabel med null elementer er tom.
+	 * Test pÃ¥ at en stabel med null elementer er tom.
 	 */
 	@Test
 	public void pushPopErTom() {
@@ -138,7 +138,7 @@ public abstract class StabelADTTest {
 
 	
 	/**
-	 * Forsøk på pop av en tom stabel skal gi "underflow excepton" *
+	 * ForsÃ¸k pÃ¥ pop av en tom stabel skal gi "underflow excepton" *
 	 * 
 	 * @throws EmptyCollectionException expected exception
 	 */

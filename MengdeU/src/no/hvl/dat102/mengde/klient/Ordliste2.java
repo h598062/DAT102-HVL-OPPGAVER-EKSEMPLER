@@ -14,7 +14,7 @@ public class Ordliste2 {
 
 		MengdeADT<String> ordListe1 = new KjedetMengde<String>();
 
-		String[] ord = { "God", "dag", "Hans", "Hansen", "Hansaby","Førde", "Olsen", "Ole", "buss", "rute", "Bergen" };
+		String[] ord = { "God", "dag", "Hans", "Hansen", "Hansaby","FÃ¸rde", "Olsen", "Ole", "buss", "rute", "Bergen" };
 
 		Scanner tastatur = new Scanner(System.in);
 		// Legger til ordene i mengden ordListe1

@@ -19,7 +19,7 @@ public class TabellHaug<T extends Comparable<T>> {
 		data[antall] = el; // Plasser den nye helt sist
 		antall++;
 		if (antall > 1)
-			reparerOpp(); // Bytt om oppover hvis nødvendig
+			reparerOpp(); // Bytt om oppover hvis nÃ¸dvendig
 	}
 
 	private void utvidTabell() {
@@ -40,7 +40,7 @@ public class TabellHaug<T extends Comparable<T>> {
 		if (antall > 0) {
 			svar = data[0];
 			data[0] = data[antall - 1];
-			reparerNed(); // Bytter om nedover hvis nødvendig
+			reparerNed(); // Bytter om nedover hvis nÃ¸dvendig
 			antall--;
 		}
 		return svar;
@@ -58,7 +58,7 @@ public class TabellHaug<T extends Comparable<T>> {
 		T hjelp;
 		
 		boolean ferdig = false;
-		int forelder = 0; // Start i roten og sml med neste nivå
+		int forelder = 0; // Start i roten og sml med neste nivÃ¥
 		int minbarn;
 		int vbarn = forelder * 2 + 1;
 		int hbarn = vbarn + 1;
@@ -72,7 +72,7 @@ public class TabellHaug<T extends Comparable<T>> {
 			
 			if ((data[forelder]).compareTo(data[minbarn]) <= 0)
 				ferdig = true;
-			else { // Bytt om og gå videre nedover hvis forelder er for stor
+			else { // Bytt om og gÃ¥ videre nedover hvis forelder er for stor
 				hjelp = data[minbarn];
 				data[minbarn] = data[forelder];
 				data[forelder] = hjelp;

@@ -31,7 +31,7 @@ public class DobbelNode<T>{
     }
 
     /******************************************************************
-      Returnerer en referanse til etterfølgeren av denne noden, 
+      Returnerer en referanse til etterfÃ¸lgeren av denne noden, 
       eller null hvis denne er siste.
     ******************************************************************/
     public DobbelNode<T> getNeste() {
@@ -39,21 +39,21 @@ public class DobbelNode<T>{
     }
 
     /*************************************************************************
-      Returnerer forgjengeren til denne noden, eller null hvis denne er første 
+      Returnerer forgjengeren til denne noden, eller null hvis denne er fÃ¸rste 
     **************************************************************************/
     public DobbelNode<T>  getForrige() {
        return forrige;
     }
 
     /******************************************************************
-      Setter neste til å peke på dnode.
+      Setter neste til Ã¥ peke pÃ¥ dnode.
     ******************************************************************/
     public void setNeste (DobbelNode<T> dnode){
        neste = dnode;
     }
 
     /******************************************************************
-      Settter ny forrige til å peke på dnode.
+      Settter ny forrige til Ã¥ peke pÃ¥ dnode.
     ******************************************************************/
     public void setForrige(DobbelNode<T> dnode) {
        forrige = dnode;

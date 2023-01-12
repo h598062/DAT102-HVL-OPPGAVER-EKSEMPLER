@@ -20,7 +20,7 @@ public interface BagADT<T> {
 	 * 
 	 * @param el er objektet som fjernes hvis det eksisterer
 	 * @return el er elmentet som fjernes hvis det fins ellers null-referanse
-	 * @exception EmptyCollectionException når samlingen er tom
+	 * @exception EmptyCollectionException nÃ¥r samlingen er tom
 	 */
 	public T fjern(T el);
 
@@ -33,9 +33,9 @@ public interface BagADT<T> {
 	// TODO public int hyppighet(T el);
 
 	/**
-	 * Undersøker om bag'en inneholder el.
+	 * UndersÃ¸ker om bag'en inneholder el.
 	 * 
-	 * @param el er objektet det søkes etter
+	 * @param el er objektet det sÃ¸kes etter
 	 * @return sann hvis bag'en inneholder el, ellers usann
 	 */
 	public boolean inneholder(T el);
@@ -55,7 +55,7 @@ public interface BagADT<T> {
 	public int antall();
 
 	/**
-	 * Undersøker om bag'en er tom
+	 * UndersÃ¸ker om bag'en er tom
 	 * 
 	 * @return sann hvis bag'en er tom, ellers usann.
 	 */

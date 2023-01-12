@@ -28,8 +28,8 @@ public class TabellStabel<T> implements StabelADT<T> {
 	}
 
 	/*******************************************************************
-	 * Legger til det spesifiserte elementet på toppen av stabelen, utvider
-	 * kapasiteten til stabelen hvis nødvendig.
+	 * Legger til det spesifiserte elementet pÃ¥ toppen av stabelen, utvider
+	 * kapasiteten til stabelen hvis nÃ¸dvendig.
 	 *******************************************************************/
 	@Override
 	public void push(T element) {
@@ -41,7 +41,7 @@ public class TabellStabel<T> implements StabelADT<T> {
 
 	/*******************************************************************
 	 * 
-	 * Fjerner toppelementet og returnereret referansen. Hvis stabelen tom fra før,
+	 * Fjerner toppelementet og returnereret referansen. Hvis stabelen tom fra fÃ¸r,
 	 * kastes unntak
 	 *******************************************************************/
 	@Override
@@ -55,7 +55,7 @@ public class TabellStabel<T> implements StabelADT<T> {
 	}
 
 	/*******************************************************************
-	 * Returnerer toppelementet uten å fjerne det. Hvis stabelen er tom fra før,
+	 * Returnerer toppelementet uten Ã¥ fjerne det. Hvis stabelen er tom fra fÃ¸r,
 	 * returneres null-ref.
 	 *******************************************************************/
 	@Override
@@ -76,7 +76,7 @@ public class TabellStabel<T> implements StabelADT<T> {
 	}
 
 	/*******************************************************************
-	 * Oppretter en ny tabell for å lagre innholdet.
+	 * Oppretter en ny tabell for Ã¥ lagre innholdet.
 	 *******************************************************************/
 	private void utvid() {
 		T[] hjelpeTabell = (T[]) (new Object[stabel.length * 2]);

@@ -26,7 +26,7 @@ public interface HaugADT <T extends Comparable<T>> {
     
     
     /**
-     * Avgjør om haugen er tom
+     * AvgjÃ¸r om haugen er tom
      * @return true hvis haugen er tom, false ellers
      */
 	 boolean erTom();

@@ -5,7 +5,7 @@ import no.hvl.dat102.kjedet.KjedetKoe;
 import no.hvl.dat102.tabell.TabellSirkulaerKoe;
 
 public class BillettKoe{	
-	private final static int PROSESSTID = 120;  	// Gj.sn tid for å betjene en kunde
+	private final static int PROSESSTID = 120;  	// Gj.sn tid for Ã¥ betjene en kunde
 	private final static int MAKS_ANT_LUKER = 10; 	// Antal billettluker
 	private final static int ANT_KUNDER = 100;		// Antall kunder i alt
 	
@@ -18,19 +18,19 @@ public class BillettKoe{
 		System.out.println("Antall kunder totalt: "+ ANT_KUNDER + " (4 pr. minutt)");
 		
 		// Simulerer alle alternativer fra 1 til MAKS_ANT_LUKER billett-luker
-		for(int ant_luker=1; ant_luker <= MAKS_ANT_LUKER; ant_luker++){//Simuleringsløkke
+		for(int ant_luker=1; ant_luker <= MAKS_ANT_LUKER; ant_luker++){//SimuleringslÃ¸kke
 			
 			// Nullstiller tid for alle luker, klokke over hver luke
 			for(int i = 0; i<ant_luker; i++){
 				lukeTid[i] = 0;
 			}
-			// Fyller køen med alle kundene
+			// Fyller kÃ¸en med alle kundene
 			for(int i = 1; i<=ANT_KUNDER; i++){ // Gj.sn ankommer en kunde hvert 15.sek
 				kundekoe.innKoe(new Kunde(i*15)); 
 			}
 			totalTid = 0;
-			// Behandler alle kunder i køen
-			// Hver luke tar etter tur 1 kunde om gangen inntil køen er tom
+			// Behandler alle kunder i kÃ¸en
+			// Hver luke tar etter tur 1 kunde om gangen inntil kÃ¸en er tom
 			while(!kundekoe.erTom()){
 				for (int lukenr = 0; lukenr < ant_luker; lukenr++){
 					if(!kundekoe.erTom()){
@@ -52,6 +52,6 @@ public class BillettKoe{
 			gjsnittsTid = totalTid/ANT_KUNDER;
 			System.out.print("Antall luker: " + ant_luker);
 			System.out.println(" Gjennomsnittlig totaltid pr. kunde: " + gjsnittsTid);
-		}//Simuleringsløkke
+		}//SimuleringslÃ¸kke
 	}
 }		

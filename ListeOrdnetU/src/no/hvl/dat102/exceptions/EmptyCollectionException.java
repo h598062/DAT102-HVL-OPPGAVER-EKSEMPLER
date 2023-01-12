@@ -2,7 +2,7 @@ package no.hvl.dat102.exceptions;
 
 //********************************************************************
 //  EmptyCollectionException.java   //
-//  Representerersituasjonen når samlingen er tom.
+//  Representerersituasjonen nÃ¥r samlingen er tom.
 //********************************************************************
 
 public class EmptyCollectionException extends RuntimeException{

@@ -1,13 +1,13 @@
 package no.hvl.dat102.mengde.klient;
 
 public class Bingokule {
-// Til å representer 'bingo-verdier' B10, N43, ... osv
+// Til Ã¥ representer 'bingo-verdier' B10, N43, ... osv
 //
 	private char bokstav;
 	private int tall;
 
 	/**
-	 * Konstruktør
+	 * KonstruktÃ¸r
 	 * 
 	 * @param verdi mellom 1 og 75
 	 */
@@ -52,7 +52,7 @@ public class Bingokule {
 			return false;
 		}
 
-		Bingokule b2 = (Bingokule) ny; // Nødvendig typekonvertering
+		Bingokule b2 = (Bingokule) ny; // NÃ¸dvendig typekonvertering
 		return (tall == b2.tall && bokstav == b2.bokstav);
 	}
 
