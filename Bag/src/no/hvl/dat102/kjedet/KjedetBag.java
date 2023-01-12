@@ -18,6 +18,7 @@ public class KjedetBag<T> implements BagADT<T> {
 		// a Fyll ut
 		nynode.setNeste(forste);
 		forste = nynode;
+		antall++;
 	}
 
 	@Override
