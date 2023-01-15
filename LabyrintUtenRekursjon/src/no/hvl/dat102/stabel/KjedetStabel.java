@@ -1,51 +1,44 @@
 package no.hvl.dat102.stabel;
 
-import no.hvl.dat102.adt.*;
+import no.hvl.dat102.adt.StabelADT;
 
 public class KjedetStabel<T> implements StabelADT<T> {
 	private LinearNode<T> topp;
-	private int antall;
 
 	public KjedetStabel() {
 		topp = null;
-		antall = 0;
+
 	}
 
 	@Override
 	public void push(T el) {
 		LinearNode<T> nynode = new LinearNode<T>(el);
-		nynode.setNeste(topp);
-		topp = nynode;
-		antall++;
+		//a Fyll ut
+
 	}
 
 	@Override
-	public T pop()  {
+	public T pop() {
 		if (erTom())
 			throw new EmptyCollectionException("stabel");
+		//b Fyll ut
 
-		T resultat = topp.getElement();
-		topp = topp.getNeste();
-		antall--;
-		return resultat;
+		return null;
 	}
 
 	@Override
-	public T peek()  {
+	public T peek() {
 		if (erTom())
 			throw new EmptyCollectionException("stabel");
-		
-		return topp.getElement();
+
+		//c Fyll ut
+		return null;
 	}
 
 	@Override
 	public boolean erTom() {
-		return (antall == 0);
+		return (topp == null);
 	}
 
-	@Override
-	public int antall() {
-		return antall;
-	}
 
 }

@@ -35,8 +35,7 @@ public class TabellStabel<T> implements StabelADT<T> {
 	public void push(T element) {
 		if(topp == stabel.length-1)
 			utvid();
-		topp++;
-		stabel[topp]=element;
+		//a Fyll ut
 	}
 
 	/*******************************************************************
@@ -48,10 +47,8 @@ public class TabellStabel<T> implements StabelADT<T> {
 	public T pop() {
 		if (erTom())
 			throw new EmptyCollectionException("Stabel");
-		T resultat = stabel[topp];
-        stabel[topp] = null;
-        topp--;
-		return resultat;
+		//b Fyll ut
+		return null;
 	}
 
 	/*******************************************************************
@@ -62,8 +59,8 @@ public class TabellStabel<T> implements StabelADT<T> {
 	public T peek() {
 		if (erTom())
 			throw new EmptyCollectionException("Stabel");
-
-		return stabel[topp];
+       //c Fyll ut
+		return null;
 		
 	}
 

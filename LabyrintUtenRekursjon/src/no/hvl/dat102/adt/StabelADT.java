@@ -42,12 +42,5 @@ public interface StabelADT<T> {
 	 * @return sann hvis tom stabel
 	 */
 	public boolean erTom();
-
-	/**
-	 * Returnerer antall elementer på stabelen.
-	 * 
-	 * @return antall elementer på stabelen
-	 */
-	public int antall();
-
+	
 }
