@@ -18,8 +18,7 @@ public class KlientSjanger {
 		
 		String sjnavn2 = "drama";
 		Sjanger sjanger2 = Sjanger.finnSjanger(sjnavn2);
-		
-		         
+				         
 		if (sjanger1 != null && sjanger2 != null) {
 			if (sjanger1.compareTo(sjanger2) < 0) {
 				System.out.print(sjanger1 + " ");
