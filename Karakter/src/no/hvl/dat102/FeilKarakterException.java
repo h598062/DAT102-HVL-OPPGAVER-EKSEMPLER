@@ -5,7 +5,7 @@ package no.hvl.dat102;
  * 
  * @author Ole Olsen
  */
-public class FeilKarakterException extends Exception {
+public class FeilKarakterException extends RuntimeException {
 
 	/**
 	 * Lager et nytt unntak.
