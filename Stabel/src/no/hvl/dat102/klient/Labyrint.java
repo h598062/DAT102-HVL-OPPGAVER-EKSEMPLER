@@ -1,23 +1,23 @@
 package no.hvl.dat102.klient;
 
 public class Labyrint {
-	
+
 	private final int FORSOEKT = 2;
-	//Blir ikke brukt i denne implementasjonen
+	// Blir ikke brukt i denne implementasjonen
 	private static final int STI = 3;
 
 	private int[][] gridd = {
-			{ 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1 }, 
-			{ 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1 },
-			{ 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0 }, 
-			{ 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1 },
-			{ 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1 }, 
-			{ 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1 },
-			{ 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, 
-			{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
-			
-	 
+			{1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1},
+			{1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1},
+			{1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0},
+			{0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1},
+			{1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1},
+			{1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1},
+			{1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+			{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+			{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
+
+
 	/**
 	 * Marker posisjonen som forsøkt
 	 */
@@ -26,7 +26,6 @@ public class Labyrint {
 	}
 
 	/**
-	 * 
 	 * @return antall rekker
 	 */
 	public int getRekker() {
@@ -34,7 +33,6 @@ public class Labyrint {
 	}
 
 	/**
-	 * 
 	 * @return antall kolonner
 	 */
 	public int getKolonner() {
@@ -42,8 +40,7 @@ public class Labyrint {
 	}
 
 	/**
-	 * Marker posisjonen som del av stien
-	 * Blir ikke brukt i denne implementasjonen
+	 * Marker posisjonen som del av stien Blir ikke brukt i denne implementasjonen
 	 */
 	public void markerSti(int rekke, int kolonne) {
 		gridd[rekke][kolonne] = STI;
@@ -54,7 +51,7 @@ public class Labyrint {
 		// sjekk på innenfor griddet
 		if (rekke >= 0 && rekke < gridd.length && kolonne >= 0 && kolonne < gridd[rekke].length) {
 			// sjekk på ikke-sperret og ikke forsøkt
-			
+
 			if (gridd[rekke][kolonne] == 1) {
 				resultat = true;
 			}
@@ -64,7 +61,6 @@ public class Labyrint {
 
 	/**
 	 * /* Returnerer en strengrepresentasjon av labyrinten.
-	 * 
 	 */
 	@Override
 	public String toString() {

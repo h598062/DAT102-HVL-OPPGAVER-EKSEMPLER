@@ -7,7 +7,7 @@ import no.hvl.dat102.exception.EmptyCollectionException;
 //********************************************************************
 
 public class TabellStabel<T> implements StabelADT<T> {
-	private final static int STDK = 100;
+	private static final int STDK = 100;
 	private int topp; // indikerer toppen
 	private T[] stabel;
 
@@ -33,22 +33,23 @@ public class TabellStabel<T> implements StabelADT<T> {
 	 *******************************************************************/
 	@Override
 	public void push(T element) {
-		if(topp == stabel.length-1)
-			utvid();
-		//a Fyll ut
+		if (topp == stabel.length - 1) {utvid();}
+		topp++;
+		stabel[topp] = element;
 	}
 
 	/*******************************************************************
-	 * 
+	 *
 	 * Fjerner toppelementet og returnereret referansen. Hvis stabelen tom fra før,
 	 * kastes unntak
 	 *******************************************************************/
 	@Override
 	public T pop() {
-		if (erTom())
-			throw new EmptyCollectionException("Stabel");
-		//b Fyll ut
-		return null;
+		if (erTom()) {throw new EmptyCollectionException("Stabel");}
+		T resultat = stabel[topp];
+		stabel[topp] = null;
+		topp--;
+		return resultat;
 	}
 
 	/*******************************************************************
@@ -57,11 +58,8 @@ public class TabellStabel<T> implements StabelADT<T> {
 	 *******************************************************************/
 	@Override
 	public T peek() {
-		if (erTom())
-			throw new EmptyCollectionException("Stabel");
-       //c Fyll ut
-		return null;
-		
+		if (erTom()) {throw new EmptyCollectionException("Stabel");}
+		return stabel[topp];
 	}
 
 	/*******************************************************************
@@ -78,8 +76,7 @@ public class TabellStabel<T> implements StabelADT<T> {
 	private void utvid() {
 		T[] hjelpeTabell = (T[]) (new Object[stabel.length * 2]);
 
-		for (int indeks = 0; indeks < stabel.length; indeks++)
-			hjelpeTabell[indeks] = stabel[indeks];
+		for (int indeks = 0; indeks < stabel.length; indeks++) {hjelpeTabell[indeks] = stabel[indeks];}
 
 		stabel = hjelpeTabell;
 	}

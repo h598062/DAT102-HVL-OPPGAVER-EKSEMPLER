@@ -4,8 +4,8 @@ public class KlientLabyrint {
 
 	public static void main(String[] args) {
 		Labyrint labyrint = new Labyrint();
-		
-        System.out.println("labyrinten");
+
+		System.out.println("labyrinten");
 		System.out.println(labyrint);
 
 		LabyrintSpill spill = new LabyrintSpill(labyrint);

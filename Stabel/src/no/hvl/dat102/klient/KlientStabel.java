@@ -3,7 +3,6 @@ package no.hvl.dat102.klient;
 import no.hvl.dat102.adt.StabelADT;
 import no.hvl.dat102.exception.EmptyCollectionException;
 import no.hvl.dat102.kjedet.KjedetStabel;
-import no.hvl.dat102.tabell.TabellStabel;
 
 public class KlientStabel {
 	public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class KlientStabel {
 		for (int i = 0; i < lengde; i++) {
 			tegnStabel.push((str.charAt(i)));
 		}
-		
+
 		System.out.println(str);
 		try {
 			while (!tegnStabel.erTom()) {
@@ -25,6 +24,6 @@ public class KlientStabel {
 		} catch (EmptyCollectionException ex) {
 			System.out.println(ex.getMessage());
 		}
-	} 
+	}
 
 }// class

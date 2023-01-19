@@ -1,15 +1,20 @@
 package no.hvl.dat102.klient;
 
 /***************************************************************/
+
 /****************************************************************/
 /*
  * Representerer en posisjon i en labyrint
  */
 
 public class Posisjon {
-	/** x koordinat */
+	/**
+	 * x koordinat
+	 */
 	private int x;
-	/** y koordinat */
+	/**
+	 * y koordinat
+	 */
 	private int y;
 
 	/*
@@ -26,12 +31,12 @@ public class Posisjon {
 	public int getX() {
 		return x;
 	}
-	
-	
+
+
 	/**
-	 * @param x , x-koordinat	 
+	 * @param x , x-koordinat
 	 */
-	 	public void setX(int x) {
+	public void setX(int x) {
 		this.x = x;
 	}
 

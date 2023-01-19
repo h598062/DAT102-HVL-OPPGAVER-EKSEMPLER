@@ -18,7 +18,7 @@ public class LabyrintSpill {
 	public boolean gjennomgaa() {
 		boolean ferdig = false;
 		Posisjon pos = new Posisjon();
-		//StabelADT<Posisjon> stabel = new TabellStabel<>();
+		// StabelADT<Posisjon> stabel = new TabellStabel<>();
 		StabelADT<Posisjon> stabel = new KjedetStabel<>();
 		stabel.push(pos);
 
