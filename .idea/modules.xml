@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bag/Bag.iml" filepath="$PROJECT_DIR$/Bag/Bag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bag2/Bag2.iml" filepath="$PROJECT_DIR$/Bag2/Bag2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DobbelKjedetListeU/DobbelKjedetListeU.iml" filepath="$PROJECT_DIR$/DobbelKjedetListeU/DobbelKjedetListeU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnumArbeidsdag/EnumArbeidsdag.iml" filepath="$PROJECT_DIR$/EnumArbeidsdag/EnumArbeidsdag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnumSjanger/EnumSjanger.iml" filepath="$PROJECT_DIR$/EnumSjanger/EnumSjanger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generisk/Generisk.iml" filepath="$PROJECT_DIR$/Generisk/Generisk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kalkulator/Kalkulator.iml" filepath="$PROJECT_DIR$/Kalkulator/Kalkulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Karakter/Karakter.iml" filepath="$PROJECT_DIR$/Karakter/Karakter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KoeT/KoeT.iml" filepath="$PROJECT_DIR$/KoeT/KoeT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LabyrintUtenRekursjon/LabyrintUtenRekursjon.iml" filepath="$PROJECT_DIR$/LabyrintUtenRekursjon/LabyrintUtenRekursjon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ListeOrdnetU/ListeOrdnetU.iml" filepath="$PROJECT_DIR$/ListeOrdnetU/ListeOrdnetU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MengdeU/MengdeU.iml" filepath="$PROJECT_DIR$/MengdeU/MengdeU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" filepath="$PROJECT_DIR$/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stabel/Stabel.iml" filepath="$PROJECT_DIR$/Stabel/Stabel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TabelHaugU/TabelHaugU.iml" filepath="$PROJECT_DIR$/TabelHaugU/TabelHaugU.iml" />
+      
+    </modules>
+  </component>
+</project>
