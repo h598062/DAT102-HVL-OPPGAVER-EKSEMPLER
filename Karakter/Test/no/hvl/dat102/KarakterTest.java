@@ -2,7 +2,7 @@ package no.hvl.dat102;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Tester Karakter.

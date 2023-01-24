@@ -1,22 +1,16 @@
 package no.hvl.dat102.adt;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
+import no.hvl.dat102.exception.EmptyCollectionException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
-import no.hvl.dat102.exception.EmptyCollectionException;
-import no.hvl.dat102.adt.StabelADT;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test for StabelADT.
- * 
+ *
  * @author Ole Olsen
  */
 public abstract class StabelADTTest {
@@ -35,7 +29,7 @@ public abstract class StabelADTTest {
 
 	/**
 	 * Hent en ny stabel for hver test.
-	 * 
+	 *
 	 * @return
 	 */
 	@BeforeEach
@@ -136,17 +130,17 @@ public abstract class StabelADTTest {
 		}
 	}
 
-	
+
 	/**
 	 * Forsøk på pop av en tom stabel skal gi "underflow excepton" *
-	 * 
+	 *
 	 * @throws EmptyCollectionException expected exception
 	 */
 	@Test
 	public void popFromEmptyIsUnderflowed() {
 		/*
 		 * Assertions.assertThrows(EmptyCollectionException.class, new Executable() {
-		 * 
+		 *
 		 * @Override public void execute() throws Throwable { stabel.pop(); } });
 		 */
 
