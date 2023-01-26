@@ -9,8 +9,8 @@ public class KlientKoe {
 
 	public static void main(String[] args) {
 		KoeADT<Character> tegnKoe = new TabellSirkulaerKoe<>();
-		//KoeADT<Character> tegnKoe = new KjedetKoe<>();
-		//Bytte ut med KjedetKoe og med SirkulaerKoe
+		// KoeADT<Character> tegnKoe = new KjedetKoe<>();
+		// Bytte ut med KjedetKoe og med SirkulaerKoe
 		String streng = " Denne koen er en FIFO datastruktur.";
 		int lengde = streng.length();
 		for (int i = 0; i < lengde; i++) {

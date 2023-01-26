@@ -7,11 +7,13 @@ import no.hvl.dat102.tabell.TabellSirkulaerKoe;
 public class KlientKoding {
 	// eks listing 5.1 i boken,
 	public static void main(String[] a) {
-		int[] noekkel = { 5, 12, -3, 8, -9, 4, 10 };
+		int[] noekkel = {5, 12, -3, 8, -9, 4, 10};
 		String dekodet = "", kodet = "";
 		String melding = "Dette er en proeve på en tekst";
 		KoeADT<Integer> koe1 = new TabellSirkulaerKoe<>();
 		KoeADT<Integer> koe2 = new TabellSirkulaerKoe<>();
+		// KoeADT<Integer> koe1 = new KjedetKoe<>();
+		// KoeADT<Integer> koe2 = new KjedetKoe<>();
 		// Bytte ut med anne implementasjon
 		int kodeVerdi;
 
