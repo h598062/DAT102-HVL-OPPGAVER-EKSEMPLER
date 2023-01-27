@@ -68,7 +68,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	}//
 
 	@Override
-	public T fjern(T element) {
+	public T fjern(T element) { //Denne skal vi se på litt senere
 
 		if (erTom())
 			throw new EmptyCollectionException("mengde");
@@ -148,14 +148,9 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		} else {
 			Iterator<T> teller = m2.iterator();
 
-			while (teller.hasNext() && likeMengder) {
-				T element = teller.next();
-				if (!this.inneholder(element)) {
-					likeMengder = false;
-				}
-			}
+			//Fyll ut
 		}
-		return likeMengder;
+		return true;// Midlertidig
 	}
 
 	@Override
@@ -167,7 +162,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	public int antall() {
 		return antall;
 	}
-
+/*
 	@Override
 	public MengdeADT<T> union(MengdeADT<T> m2) {
 		
@@ -190,6 +185,21 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 		return begge;
 	}//
+*/
+	@Override
+	public MengdeADT<T> union (MengdeADT<T> m2) { // Denne ersattes med en mer effektiv union, se kladdeoppgavenr3
+		KjedetMengde<T> begge = new KjedetMengde<T>();
+	    LinearNode<T> aktuell = start;
+	    while (aktuell != null) {    
+	          begge.leggTil (aktuell.getElement());
+	          aktuell = aktuell.getNeste();   //this-mengden
+	    }//while
+	    Iterator<T> teller = m2.iterator();
+	    while (teller.hasNext()){
+	           begge.leggTil (teller.next());
+	     }   
+	    return begge;
+	}//
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
@@ -197,7 +207,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		MengdeADT<T> snittM = new KjedetMengde<T>();
 		T element;
 		/*
-		 * ..
+		 * Fyll ut senere
 		 * 
 		 * if (this.inneholder(element)) ((KjedetMengde<T>) snittM).settInn(element);
 		 */
@@ -210,7 +220,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		MengdeADT<T> differensM = new KjedetMengde<T>();
 		T element;
 		/*
-		 * Fyll ut
+		 * Fyll ut senere
 		 * 
 		 */
 
@@ -221,7 +231,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	public boolean undermengde(MengdeADT<T> m2) {
 		// TODO
 		boolean erUnderMengde = true;
-		// ...
+		// ... Fyll ut senere
 		return erUnderMengde;
 	}
 
@@ -230,7 +240,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		return new KjedetIterator<T>(start);
 	}
 
-	private void settInn(T element) {
+	private void settInn(T element) { //Hjelpemetode
 		LinearNode<T> nyNode = new LinearNode<T>(element);
 		nyNode.setNeste(start);
 		start = nyNode;

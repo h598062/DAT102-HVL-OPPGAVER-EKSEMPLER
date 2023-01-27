@@ -44,7 +44,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 			antall++;
 		}
 	}
-	
+
 	@Override
 	public void leggTilAlle(MengdeADT<T> m2) {
 		Iterator<T> teller = m2.iterator();
@@ -69,7 +69,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 		int indeks = tilf.nextInt(antall);
 		svar = tab[indeks];
 		tab[indeks] = tab[antall - 1];
-		tab[antall-1]= null;
+		tab[antall - 1] = null;
 		antall--;
 
 		return svar;
@@ -85,14 +85,14 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 		boolean funnet = false;
 		T svar = null;
-		for(int i = 0; (i < antall && !funnet);i++) {
-			if(tab[i].equals(element)) {
+		for (int i = 0; (i < antall && !funnet); i++) {
+			if (tab[i].equals(element)) {
 				svar = tab[i];
-				tab[i] = tab[antall-1];
-				//tab[antall-1] = null;
+				tab[i] = tab[antall - 1];
+				// tab[antall-1] = null;
 				antall--;
 				funnet = true;
-				
+
 			}
 		}
 		return svar;
@@ -108,11 +108,11 @@ public class TabellMengde<T> implements MengdeADT<T> {
 		}
 		return (funnet);
 	}
-	
+
 	/*
 	 * Når vi overkjører (override) equals- meteoden er det anbefalt at vi også
-	 * overkjører hascode-metoden da en del biblioterker burker hascode sammen med
-	 * equals. Vi kommer tilbake til forklaring og bruk av hascode senere i faget.
+	 * overkjører hashcode-metoden da en del biblioteker bruker hashcode sammen med
+	 * equals. Vi kommer tilbake til forklaring og bruk av hashcode senere i faget.
 	 */
 	@Override
 	public int hashCode() {
@@ -125,58 +125,45 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public boolean equals(Object m2) {
-		//TODO
 		boolean likeMengder = true;
 		T element;
 
 		/*
-		 * ...
+		 * ...Fyll ut
 		 */
 		return likeMengder;
 	}
 
-	
-
-	/*
-	 * Denne versjonen av unionen er lite effektiv
-	 * 
-	 * @Override public MengdeADT<T> union(MengdeADT<T> m2) { TabellMengde<T> begge
-	 * = new TabellMengde<T>(); for (int i = 0; i < antall; i++) {
-	 * begge.leggTil(tab[i]); } Iterator<T> teller = m2.oppramser();
-	 * 
-	 * while (teller.hasNext()) { begge.leggTil(teller.next()); } return
-	 * (MengdeADT<T>)begge; }
-	 */
 	@Override
+	public MengdeADT<T> union(MengdeADT<T> m2) { //Denne metoden ersattes med en mer effektiv, se KladdeoppgaveNr3
+		TabellMengde<T> begge = new TabellMengde<T>();
+		for (int i = 0; i < antall; i++) {
+			begge.leggTil(tab[i]);
+		}
+		Iterator<T> teller = m2.iterator();
 
-	public MengdeADT<T> union(MengdeADT<T> m2) {
-		//TODO - Lage en mer effektiv kode
-		MengdeADT<T> begge = new TabellMengde<T>();
-		T element = null;
-		/*
-		 * ...
-		 * 
-		 */
-		return begge;
-	}//
+		while (teller.hasNext()) {
+			begge.leggTil(teller.next());
+		}
+		return (MengdeADT<T>) begge;
+	}
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
 		MengdeADT<T> snittM = new TabellMengde<T>();
 		T element = null;
 		/*
-		 * ...
+		 * ...Fyll ut senere
 		 */
 		return snittM;
 	}
 
 	@Override
 	public MengdeADT<T> differens(MengdeADT<T> m2) {
-		//TODO
 		MengdeADT<T> differensM = new TabellMengde<T>();
 		T element;
 		/*
-		 * Fyll ut
+		 * Fyll ut senere
 		 * 
 		 * if (!m2.inneholder(element)) ((TabellMengde<T>) differensM).settInn(element);
 		 */
@@ -186,9 +173,8 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public boolean undermengde(MengdeADT<T> m2) {
-		//TODO
 		boolean erUnderMengde = true;
-		// ...
+		// ...Fyll ut senere
 		return false;
 	}
 
@@ -197,14 +183,12 @@ public class TabellMengde<T> implements MengdeADT<T> {
 		return new TabellIterator<T>(tab, antall);
 	}
 
-	private void settInn(T element) {
+	private void settInn(T element) {// hjelpemetode
 		if (antall == tab.length) {
 			utvidKapasitet();
 		}
 		tab[antall] = element;
 		antall++;
 	}
-
-	
 
 }// class
