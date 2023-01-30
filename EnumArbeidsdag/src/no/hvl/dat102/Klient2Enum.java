@@ -31,9 +31,5 @@ public class Klient2Enum {
 			System.out.println("Topp\n");
 			break;
 		} // Ikke behov for default her
-
 	}// main
-
-	
-
 }// class

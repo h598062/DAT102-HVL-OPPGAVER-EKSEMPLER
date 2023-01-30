@@ -135,7 +135,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	}
 
 	@Override
-	public MengdeADT<T> union(MengdeADT<T> m2) { //Denne metoden ersattes med en mer effektiv, se KladdeoppgaveNr3
+	public MengdeADT<T> union(MengdeADT<T> m2) { // Denne metoden erstattes med en mer effektiv, se KladdeoppgaveNr3
 		TabellMengde<T> begge = new TabellMengde<T>();
 		for (int i = 0; i < antall; i++) {
 			begge.leggTil(tab[i]);

@@ -279,7 +279,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/java,intellij+iml,eclipse,visualstudiocode,windows,macos,linux
+/TabelHaugU/
+/.metadata/
 
 !easygraphics.jar
 !easygraphics-jdk10.jar

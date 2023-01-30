@@ -1,7 +1,6 @@
 package no.hvl.dat102;
 
 public class Klient1Enum {
-	
 
 	public static void main(String[] args) {
 		
@@ -15,11 +14,7 @@ public class Klient1Enum {
 		System.out.println("Arbeidet startet på " + startdag.toString());
 		System.out.println("Arbeidet slutter på " + sluttdag.toString());	
 		
-		
 		System.out.println("Arbeidet startet på " + startdag.name());
 		System.out.println("Arbeidet slutter på " + sluttdag.name());	
-		
-			
 	}
-
 }
