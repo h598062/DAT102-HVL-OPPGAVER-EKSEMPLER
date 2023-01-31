@@ -6,12 +6,13 @@ import java.util.Random;
 
 import no.hvl.dat102.exception.EmptyCollectionException;
 import no.hvl.dat102.mengde.adt.MengdeADT;
+import no.hvl.dat102.mengde.kjedet.KjedetMengde;
 
 public class TabellMengde<T> implements MengdeADT<T> {
 	// ADT-en Mengde implementert som tabell
 	//
-	private final static Random tilf = new Random();
-	private final static int STDK = 100;
+	private static final Random tilf = new Random();
+	private static final int STDK = 100;
 	private int antall;
 	private T[] tab;
 
@@ -48,8 +49,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	@Override
 	public void leggTilAlle(MengdeADT<T> m2) {
 		Iterator<T> teller = m2.iterator();
-		while (teller.hasNext())
-			leggTil(teller.next());
+		while (teller.hasNext()) {leggTil(teller.next());}
 	}
 
 	private void utvidKapasitet() {
@@ -62,8 +62,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public T fjernTilfeldig() {
-		if (erTom())
-			throw new EmptyCollectionException("mengde");
+		if (erTom()) {throw new EmptyCollectionException("mengde");}
 
 		T svar = null;
 		int indeks = tilf.nextInt(antall);
@@ -77,11 +76,10 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public T fjern(T element) {
-	
+
 		// Søker etter og fjerner element. Returnerer null-ref ved ikke-funn
 
-		if (erTom())
-			throw new EmptyCollectionException("mengde");
+		if (erTom()) {throw new EmptyCollectionException("mengde");}
 
 		boolean funnet = false;
 		T svar = null;
@@ -124,18 +122,35 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	}
 
 	@Override
-	public boolean equals(Object m2) {
+	public boolean equals(Object ny) {
+		if (this == ny) {
+			return true;
+		}
+		if (ny == null) {
+			return false;
+		}
+		if (getClass() != ny.getClass()) {
+			return false;
+		}
 		boolean likeMengder = true;
-		T element;
-
-		/*
-		 * ...Fyll ut
-		 */
+		MengdeADT<T> m2 = (TabellMengde<T>) ny;
+		if (this.antall != m2.antall()) {
+			likeMengder = false;
+		} else {
+			Iterator<T> teller = m2.iterator();
+			while (teller.hasNext() && likeMengder) {
+				T element = teller.next();
+				if (!this.inneholder(element)) {
+					likeMengder = false;
+				}
+			}
+		}
 		return likeMengder;
 	}
 
 	@Override
-	public MengdeADT<T> union(MengdeADT<T> m2) { // Denne metoden erstattes med en mer effektiv, se KladdeoppgaveNr3
+	public MengdeADT<T> union(MengdeADT<T> m2
+	) { // Denne metoden erstattes med en mer effektiv, se KladdeoppgaveNr3
 		TabellMengde<T> begge = new TabellMengde<T>();
 		for (int i = 0; i < antall; i++) {
 			begge.leggTil(tab[i]);
@@ -150,7 +165,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
-		MengdeADT<T> snittM = new TabellMengde<T>();
+		MengdeADT<T> snittM = new TabellMengde<>();
 		T element = null;
 		/*
 		 * ...Fyll ut senere
@@ -160,11 +175,11 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public MengdeADT<T> differens(MengdeADT<T> m2) {
-		MengdeADT<T> differensM = new TabellMengde<T>();
+		MengdeADT<T> differensM = new TabellMengde<>();
 		T element;
 		/*
 		 * Fyll ut senere
-		 * 
+		 *
 		 * if (!m2.inneholder(element)) ((TabellMengde<T>) differensM).settInn(element);
 		 */
 
@@ -180,7 +195,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public Iterator<T> iterator() {
-		return new TabellIterator<T>(tab, antall);
+		return new TabellIterator<>(tab, antall);
 	}
 
 	private void settInn(T element) {// hjelpemetode

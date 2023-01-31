@@ -3,16 +3,16 @@ package no.hvl.dat102;
 public class SorteringOgSoking {
 
 	/*************************************************************************************************/
-	// Søkealgoritmer
+	// SÃ¸kealgoritmer
 	/*************************************************************************************************/
 
 	/**
-	 * Metoden gjør et lineært søk i en full tabell av usorterte data
+	 * Metoden gjÃ¸r et lineÃ¦rt sÃ¸k i en full tabell av usorterte data
 	 * 
-	 * @param data er data som skal søkes i
+	 * @param data er data som skal sÃ¸kes i
 	 * @param min  er startindeks
 	 * @param maks er sluttindeks
-	 * @param el   er verdien vi søker etter
+	 * @param el   er verdien vi sÃ¸ker etter
 	 * @return elementet ved funn funnet ellers null-referanse
 	 */
 	public static <T extends Comparable<T>> T sok(T[] data, int min, int maks, T el) {
@@ -32,5 +32,5 @@ public class SorteringOgSoking {
 	
 	/****************************************************************************/
 
-	// Her kan en legge inn andre søke og sorteringsmetoder.
+	// Her kan en legge inn andre sÃ¸ke og sorteringsmetoder.
 }

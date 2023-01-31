@@ -15,7 +15,7 @@ public class KlientBingo {
 		MengdeADT<Bingokule> mengde2 = new TabellMengde<>();
 		Bingokule kule1 = null;
 		Bingokule kule2 = null;
-/*
+
 		for (int i = 1; i <= ANTALL_BALLER; i++) {
 			kule1 = new Bingokule(i);
 			kule2 = new Bingokule(ANTALL_BALLER + 1 - i);
@@ -41,6 +41,6 @@ public class KlientBingo {
 				System.out.println("Ulike mengder");
 			}
 		}
-*/
+
 	}
 }// class

@@ -12,9 +12,20 @@ public class Ordliste {
 	 */
 	public static void main(String[] args) {
 
-		MengdeADT<String> ordListe1 = new KjedetMengde<String>();
+		MengdeADT<String> ordListe1 = new KjedetMengde<>();
 
-		String[] ord = { "God", "dag", "Hans", "Hansen", "Hansaby", "Foerde","Olsen", "Ole", "buss", "rute", "Bergen" };
+		String[] ord = {
+				"God",
+				"dag",
+				"Hans",
+				"Hansen",
+				"Hansaby",
+				"Foerde",
+				"Olsen",
+				"Ole",
+				"buss",
+				"rute",
+				"Bergen"};
 
 		Scanner tastatur = new Scanner(System.in);
 		// Legger til ordene i mengden ordListe1
@@ -22,7 +33,7 @@ public class Ordliste {
 		for (int i = 0; i < ord.length; i++) {
 			ordListe1.leggTil(ord[i]);
 		}
-		MengdeADT<String> ordListe2 = new KjedetMengde<String>();
+		MengdeADT<String> ordListe2 = new KjedetMengde<>();
 
 		System.out.println("\nOppgi en streng, avslutt med zzz:\n");
 		String streng = tastatur.nextLine();
@@ -43,7 +54,7 @@ public class Ordliste {
 		} // while
 
 		// Lager unionen av de to ordlistene
-		MengdeADT<String> ordListeBegge = new KjedetMengde<String>();
+		MengdeADT<String> ordListeBegge = new KjedetMengde<>();
 
 		ordListeBegge = (KjedetMengde<String>) ordListe1.union(ordListe2);
 
@@ -56,7 +67,7 @@ public class Ordliste {
 		}
 
 		// Lager snittet av de to ordlistene
-		MengdeADT<String> ordListeFelles = new KjedetMengde<String>();
+		MengdeADT<String> ordListeFelles = new KjedetMengde<>();
 
 		ordListeFelles = (KjedetMengde<String>) ordListe1.snitt(ordListe2);
 
@@ -69,7 +80,7 @@ public class Ordliste {
 		}
 
 		// Lager differansen av de to ordlistene
-		MengdeADT<String> ordListeDiff = new KjedetMengde<String>();
+		MengdeADT<String> ordListeDiff = new KjedetMengde<>();
 
 		ordListeDiff = (KjedetMengde<String>) ordListe1.differens(ordListe2);
 

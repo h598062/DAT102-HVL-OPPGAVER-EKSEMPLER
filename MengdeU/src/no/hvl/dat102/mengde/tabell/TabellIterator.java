@@ -4,10 +4,10 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class TabellIterator<T> implements Iterator<T> {
-// Klasse som kan brukes til å gå gjennom alle elementer
-// i et objekt av klasse Mengde når denne klassen Mengde er
-// implementert vha tabell.
-//
+	// Klasse som kan brukes til å gå gjennom alle elementer
+	// i et objekt av klasse Mengde når denne klassen Mengde er
+	// implementert vha tabell.
+	//
 	private int antall; // antall elementer i mengden
 	private int pos; // posisjonen til aktuelt element
 	private T[] elementer;
@@ -28,8 +28,7 @@ public class TabellIterator<T> implements Iterator<T> {
 	@Override
 	public T next() {
 		// Returner med posisjonen til neste aktuelle element
-		if (!hasNext())
-			throw new NoSuchElementException();
+		if (!hasNext()) {throw new NoSuchElementException();}
 		pos++;
 		return elementer[pos - 1];
 	}

@@ -3,6 +3,7 @@ package no.hvl.dat102.mengde.kjedet;
 //********************************************************************
 // Kjedet implementasjon av en mengde. 
 //********************************************************************
+
 import java.util.Iterator;
 import java.util.Random;
 
@@ -25,7 +26,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	@Override
 	public void leggTil(T element) {
 		if (!(inneholder(element))) {
-			LinearNode<T> node = new LinearNode<T>(element);
+			LinearNode<T> node = new LinearNode<>(element);
 			node.setNeste(start);
 			start = node;
 			antall++;
@@ -42,8 +43,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public T fjernTilfeldig() {
-		if (erTom())
-			throw new EmptyCollectionException("mengde");
+		if (erTom()) {throw new EmptyCollectionException("mengde");}
 
 		LinearNode<T> forgjenger, aktuell;
 		T resultat = null;
@@ -68,10 +68,9 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	}//
 
 	@Override
-	public T fjern(T element) { //Denne skal vi se på litt senere
+	public T fjern(T element) { // Denne skal vi se pÃ¥ litt senere
 
-		if (erTom())
-			throw new EmptyCollectionException("mengde");
+		if (erTom()) {throw new EmptyCollectionException("mengde");}
 
 		boolean funnet = false;
 		LinearNode<T> forgjenger, aktuell;
@@ -84,9 +83,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 			forgjenger = start;
 			aktuell = start.getNeste();
 			for (int sok = 2; sok <= antall && !funnet; sok++) {
-				if (aktuell.getElement().equals(element))
-					funnet = true;
-				else {
+				if (aktuell.getElement().equals(element)) {funnet = true;} else {
 					forgjenger = aktuell;
 					aktuell = aktuell.getNeste();
 				}
@@ -147,10 +144,14 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 			likeMengder = false;
 		} else {
 			Iterator<T> teller = m2.iterator();
-
-			//Fyll ut
+			while (teller.hasNext() && likeMengder) {
+				T element = teller.next();
+				if (!this.inneholder(element)) {
+					likeMengder = false;
+				}
+			}
 		}
-		return true;// Midlertidig
+		return likeMengder;
 	}
 
 	@Override
@@ -165,28 +166,29 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 
 	@Override
-	public MengdeADT<T> union (MengdeADT<T> m2) { // Denne ersattes med en mer effektiv union, se kladdeoppgavenr3
-		KjedetMengde<T> begge = new KjedetMengde<T>();
-	    LinearNode<T> aktuell = start;
-	    while (aktuell != null) {    
-	          begge.leggTil (aktuell.getElement());
-	          aktuell = aktuell.getNeste();   //this-mengden
-	    }//while
-	    Iterator<T> teller = m2.iterator();
-	    while (teller.hasNext()){
-	           begge.leggTil (teller.next());
-	     }   
-	    return begge;
+	public MengdeADT<T> union(MengdeADT<T> m2
+	) { // Denne ersattes med en mer effektiv union, se kladdeoppgavenr3
+		KjedetMengde<T> begge = new KjedetMengde<>();
+		LinearNode<T> aktuell = start;
+		while (aktuell != null) {
+			begge.leggTil(aktuell.getElement());
+			aktuell = aktuell.getNeste();   // this-mengden
+		}// while
+		Iterator<T> teller = m2.iterator();
+		while (teller.hasNext()) {
+			begge.leggTil(teller.next());
+		}
+		return begge;
 	}//
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
 		// TODO
-		MengdeADT<T> snittM = new KjedetMengde<T>();
+		MengdeADT<T> snittM = new KjedetMengde<>();
 		T element;
 		/*
 		 * Fyll ut senere
-		 * 
+		 *
 		 * if (this.inneholder(element)) ((KjedetMengde<T>) snittM).settInn(element);
 		 */
 		return snittM;
@@ -195,11 +197,11 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	@Override
 	public MengdeADT<T> differens(MengdeADT<T> m2) {
 		// TODO
-		MengdeADT<T> differensM = new KjedetMengde<T>();
+		MengdeADT<T> differensM = new KjedetMengde<>();
 		T element;
 		/*
 		 * Fyll ut senere
-		 * 
+		 *
 		 */
 
 		return differensM;
@@ -215,11 +217,11 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public Iterator<T> iterator() {
-		return new KjedetIterator<T>(start);
+		return new KjedetIterator<>(start);
 	}
 
-	private void settInn(T element) { //Hjelpemetode
-		LinearNode<T> nyNode = new LinearNode<T>(element);
+	private void settInn(T element) { // Hjelpemetode
+		LinearNode<T> nyNode = new LinearNode<>(element);
 		nyNode.setNeste(start);
 		start = nyNode;
 		antall++;

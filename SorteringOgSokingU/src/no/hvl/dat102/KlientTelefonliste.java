@@ -54,8 +54,8 @@ public class KlientTelefonliste {
 		for (int i = 0; i < venner.length; i++) {
 			System.out.println(venner[i]);
 		}
-		/* Lineær søking i usortert tabell , venner */
-		/* Lineærsøking som returnerer sann eller usann */
+		/* LineÃ¦r sÃ¸king i usortert tabell , venner */
+		/* LineÃ¦rsÃ¸king som returnerer sann eller usann */
 		Kontakt kontakt1 = venner[2];
 		Kontakt kontakt2 = new Kontakt("Ole", "Olsen", "55555555");
 		Kontakt resultat = null;

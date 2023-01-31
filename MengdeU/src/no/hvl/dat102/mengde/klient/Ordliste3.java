@@ -7,25 +7,25 @@ public class Ordliste3 {
 
 	public static void main(String[] args) {
 
-		MengdeADT<String> ordListe1 = new KjedetMengde<String>();
+		MengdeADT<String> ordListe1 = new KjedetMengde<>();
 
-		String[] ord1 = { "God", "dag", "Hans", "Hansen", "Hansaby", "Olsen", "Ole", "buss", "rute", "Bergen" };
+		String[] ord1 = {"God", "dag", "Hans", "Hansen", "Hansaby", "Olsen", "Ole", "buss", "rute", "Bergen"};
 
-		String[] ord2 = { "God", "Hei", "Eva", "Oslo", "Foerde", "Olsen", };
+		String[] ord2 = {"God", "Hei", "Eva", "Oslo", "Foerde", "Olsen",};
 
 		for (int i = 0; i < ord1.length; i++) {
 			ordListe1.leggTil(ord1[i]);
 		}
 		int ant = ordListe1.antall();
 
-		MengdeADT<String> ordListe2 = new KjedetMengde<String>();
+		MengdeADT<String> ordListe2 = new KjedetMengde<>();
 
 		for (int i = 0; i < ord2.length; i++) {
 			ordListe2.leggTil(ord2[i]);
 		}
 
 		// Lager unionen av de to ordlistene
-		MengdeADT<String> ordListeBegge = new KjedetMengde<String>();
+		MengdeADT<String> ordListeBegge = new KjedetMengde<>();
 
 		ordListeBegge = ordListe1.union(ordListe2);
 

@@ -2,7 +2,7 @@ package no.hvl.dat102.mengde.klient;
 
 import no.hvl.dat102.mengde.adt.MengdeADT;
 import no.hvl.dat102.mengde.kjedet.KjedetMengde;
-import java.lang.Iterable;
+
 import java.util.Iterator;
 
 public class Ordliste4 {
@@ -10,9 +10,9 @@ public class Ordliste4 {
 
 		MengdeADT<String> ordListe1 = new KjedetMengde<>();
 
-		String[] ord1 = { "God", "dag", "Hans", "Hansen", "Hansaby", "Olsen", "Ole", "buss", "rute", "Bergen" };
+		String[] ord1 = {"God", "dag", "Hans", "Hansen", "Hansaby", "Olsen", "Ole", "buss", "rute", "Bergen"};
 
-		String[] ord2 = { "God", "Hei", "Eva", "Oslo", "Førde", "Olsen", };
+		String[] ord2 = {"God", "Hei", "Eva", "Oslo", "FÃ¸rde", "Olsen",};
 
 		for (int i = 0; i < ord1.length; i++) {
 			ordListe1.leggTil(ord1[i]);
@@ -30,25 +30,25 @@ public class Ordliste4 {
 
 		ordListeBegge = ordListe1.union(ordListe2);
 		// https://www.geeksforgeeks.org/iterator-vs-foreach-in-java/
-		//for-each-løkke
-		
+		// for-each-lÃ¸kke
+
 		for (String str : ordListeBegge) {
 			System.out.println(str);
 		}
-		//for-løkke med iterator
+		// for-lÃ¸kke med iterator
 		System.out.println();
-		
-		for(Iterator i = ordListeBegge.iterator(); i.hasNext();) {
+
+		for (Iterator i = ordListeBegge.iterator(); i.hasNext(); ) {
 			System.out.println(i.next());
 		}
-		
+
 
 		/*
-		 * 
+		 *
 		 * System.out.println("Utskrift av unionen av begge ordlistene"); String
 		 * hentStreng = ""; while (!ordListeBegge.erTom()) { hentStreng =
 		 * ordListeBegge.fjernTilfeldig(); System.out.println(hentStreng);
-		 * 
+		 *
 		 * }
 		 */
 	}
