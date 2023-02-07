@@ -56,6 +56,7 @@ public class SpesiellKjedetStruktur<T> {
 		LinearNode<T> r, n, s;
 		s = start;
 		r = null;
+		n = null;
 		while (s != null) {
 			n = s;
 			s = s.getNeste();
@@ -80,9 +81,9 @@ public class SpesiellKjedetStruktur<T> {
 		return antallLike;
 	}
 
-	public void leggTilBak(T el, T nyttElement) {
+	public void leggTilEtter(T el, T nyttElement) {
 		/*
-		 * som legger til en ny node med elementet nyttElement rett bak noden med
+		 * som legger til en ny node med elementet nyttElement rett etter noden med
 		 * elementet el. Dersom el ikke fins i strukturen, skal den nye noden plasseres
 		 * inn helt framme.
 		 */
