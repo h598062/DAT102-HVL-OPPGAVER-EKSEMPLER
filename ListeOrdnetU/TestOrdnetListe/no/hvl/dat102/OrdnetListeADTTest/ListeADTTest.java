@@ -18,9 +18,8 @@ public abstract class ListeADTTest {
 	 * @author Ole Olsen
 	 */
 	private OrdnetListeADT<Integer> liste;
-	// TODO  mangler en god del!
 
-	// Testdata
+	// Test data
 	private Integer e0 = 1;
 	private Integer e1 = 2;
 	private Integer e2 = 3;
@@ -28,11 +27,12 @@ public abstract class ListeADTTest {
 	private Integer e4 = 5;
 	private Integer e5 = 6;
 
-	protected abstract OrdnetListeADT<Integer> reset();
-
 	/**
 	 * Opprett en tom liste for hver test.
 	 */
+
+	protected abstract OrdnetListeADT<Integer> reset();
+
 	@BeforeEach
 	public final void setup() {
 		liste = reset();
@@ -51,18 +51,22 @@ public abstract class ListeADTTest {
 	 */
 	@Test
 	public final void leggTilOgFjern() {
-		liste.leggTil(e0);
-		liste.leggTil(e1);
-		liste.leggTil(e2);
-		liste.leggTil(e3);
-		liste.leggTil(e4);
-		liste.leggTil(e5);
-		assertEquals(e5, liste.fjern(e5));
-		assertEquals(e4, liste.fjern(e4));
-		assertEquals(e3, liste.fjern(e3));
-		assertEquals(e2, liste.fjern(e2));
-		assertEquals(e1, liste.fjern(e1));
-		assertEquals(e0, liste.fjern(e0));
+		try {
+			liste.leggTil(e0);
+			liste.leggTil(e1);
+			liste.leggTil(e2);
+			liste.leggTil(e3);
+			liste.leggTil(e4);
+			liste.leggTil(e5);
+			assertEquals(e5, liste.fjern(e5));
+			assertEquals(e4, liste.fjern(e4));
+			assertEquals(e3, liste.fjern(e3));
+			assertEquals(e2, liste.fjern(e2));
+			assertEquals(e1, liste.fjern(e1));
+			assertEquals(e0, liste.fjern(e0));
+		} catch (EmptyCollectionException e) {
+			fail("feilet uventet " + e.getMessage());
+		}
 	}
 
 	/**
@@ -70,12 +74,26 @@ public abstract class ListeADTTest {
 	 */
 	@Test
 	public final void viseOrdnetIkkeAvtagende() {
-		// ... Fyll ut
-		// ... Legg til elementer og bruk fjernFoerste
+		try {
+			liste.leggTil(e1);
+			liste.leggTil(e2);
+			liste.leggTil(e5);
+			liste.leggTil(e0);
+			liste.leggTil(e4);
+			liste.leggTil(e3);
+			assertEquals(e0, liste.fjernFoerste());
+			assertEquals(e1, liste.fjernFoerste());
+			assertEquals(e2, liste.fjernFoerste());
+			assertEquals(e3, liste.fjernFoerste());
+			assertEquals(e4, liste.fjernFoerste());
+			assertEquals(e5, liste.fjernFoerste());
+		} catch (EmptyCollectionException e) {
+			fail("feilet uventet " + e.getMessage());
+		}
 	}
 
 	@Test
-	public final void viseOrdnetIkkeØkende() {
+	public final void viseOrdnetIkkeStigende() {
 		try {
 			liste.leggTil(e1);
 			liste.leggTil(e2);
@@ -100,7 +118,15 @@ public abstract class ListeADTTest {
 	@Test
 	public final void leggTilOgfjernMedDuplikater() {
 		try {
-			// ... Fyll ut med å legge til passende elementer
+			liste.leggTil(e0);
+			liste.leggTil(e1);
+			liste.leggTil(e2);
+			liste.leggTil(e3);
+			liste.leggTil(e1);
+			liste.leggTil(e3);
+			liste.leggTil(e4);
+			liste.leggTil(e5);
+			liste.leggTil(e5);
 
 			assertEquals(e0, liste.fjern(e0));
 			assertEquals(e1, liste.fjern(e1));
@@ -112,6 +138,7 @@ public abstract class ListeADTTest {
 		} catch (EmptyCollectionException e) {
 			fail("feilet uventet " + e.getMessage());
 		}
+
 	}
 
 	/**
@@ -152,24 +179,33 @@ public abstract class ListeADTTest {
 	 */
 	@Test
 	public final void leggTilFjernErTom() {
-		// ...Fyll ut. Legg inn elementer og fjern de
+		try {
+			liste.leggTil(e0);
+			liste.leggTil(e1);
+			liste.leggTil(e2);
+			liste.leggTil(e3);
+			liste.leggTil(e4);
+			liste.leggTil(e5);
+			liste.fjern(e5);
+			liste.fjern(e4);
+			liste.fjern(e3);
+			liste.fjern(e2);
+			liste.fjern(e1);
+			liste.fjern(e0);
+			assertTrue(liste.erTom());
+		} catch (EmptyCollectionException e) {
+			fail("feilet uventet " + e.getMessage());
+		}
 	}
 
 	/**
 	 * Prøver å ta ut et element fra en tom liste.
-	 *
-	 * ... Fyll ut
-	 */
-
-	/**
-	 * Forsøk på å returnere første fra tom liste
-	 *
-	 * @throws EmptyCollectionException expected exception
 	 */
 	@Test
-	public void foersteFraTom() {
-		Assertions.assertThrows(EmptyStackException.class, () -> {
-			liste.foerste();
+
+	public void fjernFraTomListe() {
+		Assertions.assertThrows(EmptyCollectionException.class, () -> {
+			liste.fjernFoerste();
 		});
 	}
 

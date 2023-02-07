@@ -23,8 +23,9 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 	public T fjernFoerste() {
 		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
-		T resultat = null;
-		// ...Fyll ut
+		T resultat = foerste.getElement();
+		foerste = foerste.getNeste();
+		antall--;
 		return resultat;
 	}
 
@@ -32,8 +33,8 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 	public T fjernSiste() {
 		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
-		T resultat = null;
-		// ...Fyll ut
+		T resultat = siste.getElement();
+		fjern(resultat);
 		return resultat;
 	}
 
@@ -41,18 +42,14 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 	public T foerste() {
 		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
-		T svar = foerste.getElement();
-
-		return svar;
+		return foerste.getElement();
 	}
 
 	@Override
 	public T siste() {
 		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
-		T resultat = siste.getElement();
-
-		return resultat;
+		return siste.getElement();
 	}
 
 	@Override
@@ -67,12 +64,39 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public void leggTil(T element) {
-
-		// ...Fyll ut
+		LinearNode<T> nyNode = new LinearNode<>(element);
+		// snarvei for å sjekke om element som kommer inn er større enn alt annet i listen
+		// da kan vi legge den inn på slutten
+		if (siste != null && element.compareTo(siste.getElement()) > 0) {
+			siste.setNeste(nyNode);
+			siste = nyNode;
+			antall++;
+			return;
+		}
+		LinearNode<T> forrige = null, denne = foerste;
+		while (denne != null && element.compareTo(denne.getElement()) > 0) {
+			forrige = denne;
+			denne = denne.getNeste();
+		}
+		if (forrige != null && denne != null) {
+			forrige.setNeste(nyNode);
+			nyNode.setNeste(denne);
+		} else if (forrige != null) {
+			forrige.setNeste(nyNode);
+			siste = nyNode;
+		} else if (denne != null) {
+			nyNode.setNeste(foerste);
+			foerste = nyNode;
+		} else { // hvis forrige e null
+			foerste = nyNode;
+			siste = nyNode;
+		}
+		antall++;
 	}
 
 	@Override
 	public T fjern(T element) {
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 		T svar = null;
 		LinearNode<T> forrige = null, denne = foerste;
 		while (denne != null && element.compareTo(denne.getElement()) > 0) {
