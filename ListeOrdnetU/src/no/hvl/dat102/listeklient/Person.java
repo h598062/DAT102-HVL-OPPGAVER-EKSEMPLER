@@ -51,7 +51,7 @@ public class Person implements Comparable<Person> {
 	public int compareTo(Person denAndrePersonen) {
 		int resultat = 0;
 		//... Fyll ut
-		//Kall på compareTo i Stringklassen
+		// Kall på compareTo i Stringklassen
 		return resultat;
 	}//
 

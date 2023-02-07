@@ -1,9 +1,9 @@
 package no.hvl.dat102.listeklient;
 
-import java.util.Scanner;
-
 import no.hvl.dat102.adt.OrdnetListeADT;
 import no.hvl.dat102.kjedet.KjedetOrdnetListe;
+
+import java.util.Scanner;
 
 public final class KlientOrdnetListe {
 
@@ -16,14 +16,13 @@ public final class KlientOrdnetListe {
 	/**
 	 * Hovedprogrammet.
 	 *
-	 * @param args
-	 *            ikke i bruk
+	 * @param args ikke i bruk
 	 */
 	public static void main(String[] args) {
-		
 
-		 OrdnetListeADT<String> navneListe1 = new KjedetOrdnetListe<String>();
-		 OrdnetListeADT<String> navneListe2 = new KjedetOrdnetListe<String>();
+
+		OrdnetListeADT<String> navneListe1 = new KjedetOrdnetListe<>();
+		OrdnetListeADT<String> navneListe2 = new KjedetOrdnetListe<>();
 
 		Scanner in = new Scanner(System.in);
 		String navn, svar;

@@ -5,8 +5,8 @@ import no.hvl.dat102.exceptions.EmptyCollectionException;
 
 public class TabellOrdnetListe<T extends Comparable<T>> implements OrdnetListeADT<T> {
 
-	private final static int STDK = 100;
-	private final static int IKKE_FUNNET = -1;
+	private static final int STDK = 100;
+	private static final int IKKE_FUNNET = -1;
 	private int bak;
 	private T[] liste;
 
@@ -21,8 +21,7 @@ public class TabellOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T fjernSiste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
 		T resultat = null;
 		// ... Fyll ut
@@ -31,8 +30,7 @@ public class TabellOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T fjernFoerste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
 		T resultat = null;
 		// ... Fyll ut
@@ -41,8 +39,7 @@ public class TabellOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T foerste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
 		T resultat = liste[0];
 		return resultat;
@@ -50,9 +47,8 @@ public class TabellOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T siste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
-		
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
+
 		T resultat = null;
 		// ...Fyll ut
 

@@ -1,19 +1,21 @@
 package no.hvl.dat102.adt;
 
+import no.hvl.dat102.exceptions.EmptyCollectionException;
+
 /**
- * Definerer interface til en generell liste. Spesielle typer av lister vil bli
- * avledet av dette grensesnittet.
+ * Definerer interface til en generell liste. Spesielle typer av lister vil bli avledet av dette
+ * grensesnittet.
  *
  * @param <T> elementtypen
  */
 public interface ListeADT<T> {
 
 	/**
-	 * Fjerner og returnerer det spesifiserte elementet fra denne listen hvis det
-	 * fins.
+	 * Fjerner og returnerer det spesifiserte elementet fra denne listen hvis det fins.
 	 *
-	 * @exception EmptyCollectionException unntak kastes hvis listen allerede er tom
 	 * @return elementet som er fjernet
+	 *
+	 * @throws EmptyCollectionException unntak kastes hvis listen allerede er tom
 	 */
 	T fjern(T element);
 
@@ -33,25 +35,28 @@ public interface ListeADT<T> {
 
 	/**
 	 * Fjerner og returnerer referansen til det siste elementet fra denne listen.
-	 * 
-	 * @exception EmpyCollectionException unntak kastes dersom listen allerede er tom
+	 *
 	 * @return elementet som er fjernet
+	 *
+	 * @throws EmptyCollectionException unntak kastes dersom listen allerede er tom
 	 */
 	T fjernSiste();
 
 	/**
 	 * Returnerer en referanse til det første elementet i denne listen.
-	 * 
-	 * @exception EmpyCollectionException unntak kastes dersom listen allerede er tom
+	 *
 	 * @return første element i listen
+	 *
+	 * @throws EmptyCollectionException unntak kastes dersom listen allerede er tom
 	 */
 	T foerste();
 
 	/**
 	 * Returnerer en referanse til det siste elmentet i denne listen.
-	 * 
-	 * @exception EmptyCollectionException unntak kastes dersom listen allerede er tom
+	 *
 	 * @return siste element i listen
+	 *
+	 * @throws EmptyCollectionException unntak kastes dersom listen allerede er tom
 	 */
 	T siste();
 

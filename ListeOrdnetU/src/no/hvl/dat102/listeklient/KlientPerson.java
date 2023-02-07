@@ -10,20 +10,20 @@ public class KlientPerson {
 		Person anne = new Person("Anne", "Iversen", 1996);
 		Person ole = new Person("Ole", "Vik", 1995);
 		Person bendik = new Person("Bendik", "Ness", 1997);
-		
-		OrdnetListeADT<Person> liste = new TabellOrdnetListe<Person>();
-		
+
+		OrdnetListeADT<Person> liste = new TabellOrdnetListe<>();
+
 		liste.leggTil(anne);
 		liste.leggTil(ole);
 		liste.leggTil(bendik);
-		
+
 		Person person = null;
-		
-		while(!liste.erTom()) {
+
+		while (!liste.erTom()) {
 			person = liste.fjernFoerste();
 			System.out.println(person);
 		}
-		
+
 
 	}
 

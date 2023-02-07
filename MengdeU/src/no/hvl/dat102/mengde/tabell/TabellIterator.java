@@ -36,5 +36,5 @@ public class TabellIterator<T> implements Iterator<T> {
 	@Override
 	public void remove() {
 		throw new UnsupportedOperationException("Denne er ikke implementert");
-		}
+	}
 }// class

@@ -1,29 +1,25 @@
 package no.hvl.dat102.OrdnetListeADTTest;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
+import no.hvl.dat102.adt.OrdnetListeADT;
+import no.hvl.dat102.exceptions.EmptyCollectionException;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
 
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-
-import no.hvl.dat102.adt.OrdnetListeADT;
-import no.hvl.dat102.exceptions.EmptyCollectionException;
+import static org.junit.jupiter.api.Assertions.*;
 
 public abstract class ListeADTTest {
 
 	/**
 	 * Test av OrdnetListeADT med heltall.
-	 * 
+	 *
 	 * @author Ole Olsen
 	 */
 	private OrdnetListeADT<Integer> liste;
-    // TODO  mangler en god del!
-	
+	// TODO  mangler en god del!
+
 	// Testdata
 	private Integer e0 = 1;
 	private Integer e1 = 2;
@@ -36,8 +32,6 @@ public abstract class ListeADTTest {
 
 	/**
 	 * Opprett en tom liste for hver test.
-	 * 
-	 * 
 	 */
 	@BeforeEach
 	public final void setup() {
@@ -73,7 +67,6 @@ public abstract class ListeADTTest {
 
 	/**
 	 * Tester ordning ikke-avtagende
-	 * 
 	 */
 	@Test
 	public final void viseOrdnetIkkeAvtagende() {
@@ -164,14 +157,14 @@ public abstract class ListeADTTest {
 
 	/**
 	 * Prøver å ta ut et element fra en tom liste.
-	 * 
+	 *
 	 * ... Fyll ut
 	 */
 
 	/**
 	 * Forsøk på å returnere første fra tom liste
-	 * 
-	 * @exception EmptyCollectionException expected exception
+	 *
+	 * @throws EmptyCollectionException expected exception
 	 */
 	@Test
 	public void foersteFraTom() {

@@ -4,7 +4,6 @@ import no.hvl.dat102.adt.OrdnetListeADT;
 import no.hvl.dat102.exceptions.EmptyCollectionException;
 
 /**
- * 
  * @param <T> elementypen
  */
 public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeADT<T> {
@@ -22,8 +21,7 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T fjernFoerste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
 		T resultat = null;
 		// ...Fyll ut
@@ -32,8 +30,7 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T fjernSiste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
 		T resultat = null;
 		// ...Fyll ut
@@ -42,8 +39,7 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T foerste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
 		T svar = foerste.getElement();
 
@@ -52,8 +48,7 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
 
 	@Override
 	public T siste() {
-		if (erTom())
-			throw new EmptyCollectionException("ordnet liste");
+		if (erTom()) {throw new EmptyCollectionException("ordnet liste");}
 
 		T resultat = siste.getElement();
 

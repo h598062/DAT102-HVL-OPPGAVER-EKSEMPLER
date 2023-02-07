@@ -1,8 +1,8 @@
 package no.hvl.dat102.mengde.adt;
 
-import java.util.Iterator;
-
 import no.hvl.dat102.exception.EmptyCollectionException;
+
+import java.util.Iterator;
 
 public interface MengdeADT<T> extends Iterable<T> {
 	// Interface som definerer alle operasjoner i en ADT

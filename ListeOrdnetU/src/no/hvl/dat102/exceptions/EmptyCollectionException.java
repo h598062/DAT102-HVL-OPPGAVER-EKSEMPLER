@@ -5,15 +5,15 @@ package no.hvl.dat102.exceptions;
 //  Representerersituasjonen når samlingen er tom.
 //********************************************************************
 
-public class EmptyCollectionException extends RuntimeException{
-   /**
-	 * 
+public class EmptyCollectionException extends RuntimeException {
+	/**
+	 *
 	 */
-	
-/******************************************************************
-     Setter opp dette unntaket med passende melding.
-   ******************************************************************/
-   public EmptyCollectionException (String collection){
-      super (" Denne " + collection + " er tom.");
-   }
+
+	/******************************************************************
+	 Setter opp dette unntaket med passende melding.
+	 ******************************************************************/
+	public EmptyCollectionException(String collection) {
+		super(" Denne " + collection + " er tom.");
+	}
 }

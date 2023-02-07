@@ -1,19 +1,17 @@
 package no.hvl.dat102.adt;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import no.hvl.dat102.exceptions.EmptyCollectionException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import no.hvl.dat102.exceptions.EmptyCollectionException;
+import static org.junit.jupiter.api.Assertions.*;
 
 public abstract class OrdnetListeADTTest {
 
 	/**
 	 * Test av OrdnetListe med heltall.
-	 * 
+	 *
 	 * @author Ole Olsen
 	 */
 
@@ -29,8 +27,6 @@ public abstract class OrdnetListeADTTest {
 
 	/**
 	 * Opprett en tom liste for hver test.
-	 * 
-	 *
 	 */
 
 	protected abstract OrdnetListeADT<Integer> reset();
@@ -69,7 +65,6 @@ public abstract class OrdnetListeADTTest {
 
 	/**
 	 * Tester ordning ikke-avtagende
-	 * 
 	 */
 	@Test
 	public final void viseOrdnetIkkeAvtagende() {
@@ -152,15 +147,14 @@ public abstract class OrdnetListeADTTest {
 
 	/**
 	 * Prøver å ta ut et element fra en tom liste.
-	 * 
 	 */
 	@Test
-	
-	public void fjernFraTomListe() {	
+
+	public void fjernFraTomListe() {
 		Assertions.assertThrows(EmptyCollectionException.class, () -> {
 			liste.fjernFoerste();
 		});
 	}
-	
+
 
 }
