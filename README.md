@@ -1,2 +1,3 @@
+# DAT102 #
 
-Algoritmer og datastrukturer -
+Oppgaver og eksempler fra forelesninger i DAT102 faget
